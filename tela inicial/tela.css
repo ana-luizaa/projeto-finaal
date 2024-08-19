@@ -21,14 +21,14 @@
 .nav-flex-row li a {
     font-family: 'Big Shoulders Text', cursive;
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-transform: uppercase;
     font-weight: 300;
 }
 
 .section-intro {
     height: 820px;
-    background-image: url(assets/imagens/fotoperfeita.jfif);
+    background-image: url(foto3.jfif);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -40,8 +40,8 @@
     font-family: 'Big Shoulders Text', cursive;
     text-align: center;
     color: #ffffff;
-    font-size: 3.5em;
-    font-weight: 500;
+    font-size: 6em;
+    font-weight: 300;
     letter-spacing: .9rem;
 }
 
@@ -51,7 +51,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
 }
 .link-to-book-wrapper {
     flex: 1;
@@ -64,74 +63,3 @@
     padding: 50px 30px;
 }
 
-.panels {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 40em;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-top: 8em;
-}
-
-.panel>div {
-    padding: 1em;
-}
-
-.panels-sm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.panel:first-child,
-.panel:last-child {
-    padding: 1em;
-}
-
-.panel:first-child {
-    background: #FF6600;
-}
-
-.panel:last-child {
-    background: #ffffff;
-    color: #000000;
-}
-
-.panel:nth-child(2) {
-    background:
-        url(assets/imgs/bugatti4.jpg) no-repeat center;
-}
-
-.panel:nth-child(3) {
-    background:
-        url(assets/imgs/bugatti5.jpeg) no-repeat center;
-}
-
-.panel:nth-child(2),
-.panel:nth-child(3) {
-    background-size: cover;
-    position: relative;
-}
-
-.specs::before,
-.panel:nth-child(2):before,
-.panel:nth-child(3):before {
-    content: '';
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-.panel h2{
-    margin: 0.7em 0;
-}
-.panel-lg{
-    background: 
-    url(assets/imgs/bugatti8.jpg)
-    no-repeat center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
