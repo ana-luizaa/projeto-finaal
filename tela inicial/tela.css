@@ -4,7 +4,9 @@ body {
     margin: 0;
     font-family: 'Big Shoulders Text', cursive;
     color: #ffffff;
-    background: linear-gradient (0, 0, 0, 0.5);
+    background-image: url(Screenshot_8.jpg);
+    background-repeat: no-repeat;
+
 }
 
 .nav-flex-row {
