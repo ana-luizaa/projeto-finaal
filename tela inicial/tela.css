@@ -123,7 +123,7 @@ body {
 
 .panel:nth-child(3) {
     background:
-        url(0d7a009e-1c05-457c-ab37-930a3877d02a.jfif) no-repeat center;
+        url(variedade-de-alto-angulo-com-deliciosa-comida-brasileira_23-2148739185.avif) no-repeat center;
 }
 
 .panel:nth-child(2),
@@ -154,18 +154,22 @@ body {
     font-family: 'Big Shoulders Text', cursive;
     font-size: 1.7em;
     font-weight: 300;
+    
 
 }
-.about_us h2 {
-    color: #FF6600; /* Cor do texto */
-    font-family: 'Big Shoulders Text', cursive; /* Fonte cursiva */
-    font-size: 1.5rem; /* Tamanho da fonte (ajuste conforme necessário) */
-    text-align: center; /* Centralizar o texto */
-    background-color: transparent; /* Remover qualquer cor de fundo, se houver */
-    background-size: cover; /* Certifique-se de que isso seja aplicável */
-    width: 100%; /* Ajuste conforme necessário */
-    height: auto; /* Ajuste conforme necessário */
-    margin: 0; /* Remove margens, se necessário para centralizar corretamente */
+.panel h2{
+
+  margin: 0.7em 0;
+}
+.panel-lg{
+
+  background: 
+  url(painel3.jpg)
+  no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  
 }
 
                     /* BOX*/
@@ -210,12 +214,7 @@ body {
     color: #FF6600;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap");
-
-
-
-
-
+/* RODAPÉ*/
 footer {
 
   position: relative;
@@ -381,17 +380,17 @@ footer {
 }
 
 .about_us h2 {
-  color: #FF6600; /* Cor do texto */
-  font-family: 'Big Shoulders Text', cursive; /* Fonte cursiva */
-  font-size: 2rem; /* Tamanho da fonte (ajuste conforme necessário) */
-  text-align: center; /* Centralizar o texto */
-  background-color: transparent; /* Remover qualquer cor de fundo */
-  width: 100%; /* Cobre toda a largura disponível */
-  margin: 20px 0; /* Adiciona margem ao redor */
-  animation: moveDown 3s infinite; /* Aplica a animação ao texto */
+  color: #000000; 
+  font-family: 'Big Shoulders Text', cursive; 
+  font-size: 2rem; 
+  text-align: center; 
+  background-color: transparent; 
+  width: 100%; 
+  margin: 20px 0; 
+  animation: moveDown 3s infinite; /
 }
 
 .about_us {
-  margin-left: 20px; /* Distância da seção dos painéis */
-  padding: 20px; /* Adiciona espaço ao redor da seção */
+  margin-left: 20px; 
+  padding: 20px;
 }
