@@ -367,3 +367,31 @@ footer {
     flex-direction: column;
     list-style: none;
 }
+
+@keyframes moveDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px); /* Ajuste a quantidade conforme necessário */
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.about_us h2 {
+  color: #FF6600; /* Cor do texto */
+  font-family: 'Big Shoulders Text', cursive; /* Fonte cursiva */
+  font-size: 2rem; /* Tamanho da fonte (ajuste conforme necessário) */
+  text-align: center; /* Centralizar o texto */
+  background-color: transparent; /* Remover qualquer cor de fundo */
+  width: 100%; /* Cobre toda a largura disponível */
+  margin: 20px 0; /* Adiciona margem ao redor */
+  animation: moveDown 3s infinite; /* Aplica a animação ao texto */
+}
+
+.about_us {
+  margin-left: 20px; /* Distância da seção dos painéis */
+  padding: 20px; /* Adiciona espaço ao redor da seção */
+}
