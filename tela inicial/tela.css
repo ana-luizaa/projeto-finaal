@@ -292,30 +292,44 @@ body {
   right: 0;
   width: 300px; 
   height: 100vh; 
-  background-color: #e0e0e0; 
-  color: #FF6600;
-  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.3); 
+  background-color: #f4f4f4; 
+  color: #333; 
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.4); 
   transform: translateX(100%);
-  transition: transform 0.3s ease; 
+  transition: transform 0.4s ease; 
   overflow-y: auto; 
-  padding: 20px;
+  padding: 30px;
   z-index: 2000; 
-  border-radius: 0; 
+  border-radius: 10px 0 0 10px;
+  font-family: 'Big Shoulders Text', cursive;
 }
+
 
 #cart.cart-visible {
   transform: translateX(0);
 }
 
+/* Cabeçalho do carrinho */
+#cart .cart-header {
+  border-bottom: 2px solid #FF6600; 
+  padding-bottom: 10px;
+}
+
 #cart h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'Big Shoulders Text', cursive; 
+  font-size: 1.5em; 
+  color: #FF6600; 
 }
 
+/* Mensagem de carrinho vazio */
 #empty-cart-message {
   text-align: center;
   color: #888888;
   margin-top: 20px;
+  font-style: italic; 
+  font-family: 'Big Shoulders Text', cursive; 
 }
 
 /* Navegação e Ícones */
@@ -324,10 +338,28 @@ body {
   gap: 20px;
   justify-content: center;
   padding: 10px;
+  font-family: 'Big Shoulders Text', cursive; 
 }
 
 .icons-container a {
   text-decoration: none;
+  color: #FF6600; 
+  font-size: 1.2em; /* Tamanho maior dos ícones */
+}
+
+.icons-container a:hover {
+  color: #333; 
+}
+
+/* Adiciona um toque mineiro com elementos tradicionais */
+#cart {
+  background: linear-gradient(to bottom, #f4f4f4 0%, #e0e0e0 100%); 
+  border: 1px solid #dcdcdc; 
+}
+
+#cart h2 {
+  border-bottom: 3px solid #8B4513; 
+  padding-bottom: 10px;
 }
 
 
