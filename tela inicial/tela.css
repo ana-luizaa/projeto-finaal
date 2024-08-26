@@ -286,28 +286,49 @@ body {
 
 
 /* Carrinho */
-
 #cart {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px; /* Largura do carrinho */
-  height: 100vh; /* Altura total da tela */
-  background-color: #ffffff; /* Cor de fundo branca */
-  color: #FF6600; /* Cor laranja para o texto */
-  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2); /* Sombra para o carrinho */
-  transform: translateX(100%); /* Começa fora da tela */
-  transition: transform 0.3s ease; /* Transição suave */
-  overflow-y: auto; /* Permite rolagem vertical */
+  width: 300px; 
+  height: 100vh; 
+  background-color: #e0e0e0; 
+  color: #FF6600;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.3); 
+  transform: translateX(100%);
+  transition: transform 0.3s ease; 
+  overflow-y: auto; 
   padding: 20px;
-  z-index: 2000; /* Garante que o carrinho fique acima de outros elementos */
+  z-index: 2000; 
+  border-radius: 0; 
 }
 
-.cart-visible {
-  transform: translateX(0); /* Move o carrinho para a tela */
+#cart.cart-visible {
+  transform: translateX(0);
 }
 
-/* Outros estilos para o carrinho */
+#cart h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#empty-cart-message {
+  text-align: center;
+  color: #888888;
+  margin-top: 20px;
+}
+
+/* Navegação e Ícones */
+.icons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.icons-container a {
+  text-decoration: none;
+}
 
 
 /* RODAPÉ*/
@@ -443,14 +464,13 @@ footer .wave#wave4{
   }
 }
 
-/* Adiciona espaço no final do conteúdo antes do footer */
+
 .panels {
-    padding-bottom: 8em; /* Ajuste conforme necessário */
+    padding-bottom: 8em; 
 }
 
-/* Ou você pode adicionar margem inferior no próprio footer */
 footer {
-    margin-top: 8em; /* Ajuste conforme necessário */
+    margin-top: 8em;
     position: relative;
     width: 100%;
     background: #ff6600;
@@ -468,7 +488,7 @@ footer {
       transform: translateY(0);
   }
   50% {
-      transform: translateY(10px); /* Ajuste a quantidade conforme necessário */
+      transform: translateY(10px); 
   }
   100% {
       transform: translateY(0);
@@ -489,4 +509,15 @@ footer {
 .about_us {
   margin-left: 20px; 
   padding: 20px;
+}
+
+.menu-icon i,
+.cart-icon i {
+    color: #FF6600; 
+    transition: color 0.3s ease; 
+}
+
+.menu-icon:hover i,
+.cart-icon:hover i {
+    color: #cc5200; 
 }
