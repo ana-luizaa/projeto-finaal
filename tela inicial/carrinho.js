@@ -4,23 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const cart = document.getElementById('cart');
     const emptyCartMessage = document.getElementById('empty-cart-message');
 
-    
     function showCart() {
         cart.classList.add('cart-visible');
     }
 
-    
     function hideCart() {
         cart.classList.remove('cart-visible');
     }
 
-    
     cartIcon.addEventListener('click', function(event) {
         event.preventDefault(); 
         showCart();
     });
 
-    
     document.addEventListener('click', function(event) {
     
         if (!cart.contains(event.target) && !cartIcon.contains(event.target)) {
@@ -28,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
     function checkCartItems() {
         const hasItems = false; 
         
