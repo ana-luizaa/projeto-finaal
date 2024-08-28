@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Big Shoulders Text', cursive;
+    background: #858585;
+    background-color: rgb(230, 235, 240)!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altura da tela inteira */
+    padding: 0;
+    }
+    
+    h3{
+        color: #FF6600;
+    }
+    
+    .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-weight: 700;
+        z-index: 1; /* Garante que o texto fique sobre o banner */
+    }
+    
+    .container {
+        background: #cacaca;
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        width: 100%;
+        margin: 320px auto 20px; /* Adiciona margem no topo para acomodar o banner fixo */
+    }
+
+.container {
+    background: #cacaca;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo dentro da div */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+}
+
+.formaPagamento,
+.tipoPedido,
+.Dados,
+.endereco {
+    background: #858585;
+    width: 100%;
+    max-width: 400px;
+    border: 5px transparent;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 20px 0; /* Espaçamento vertical entre as divs */
+    box-shadow: 0px 0px 20px #858585;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #858585;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    top: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+input[type=text] {
+    color: #000000;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    background-color: #cacaca;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
+button:hover{
+    background-color: #FF6600;
+}
+
+input[type=text]{
+    color: #000000;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px 5px 5px;
+    background-color: #cacaca;
+    border: none;
+    border-radius: 8px;
+}
+
+label{
+    font-size: 18px; 
+    color: #3b3b3b;
+}
+
+input [type=checkbox]{
+    color: #000000;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px 5px 5px;
+    background-color: #dddad8;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-section {
+    display: none; /* Todas as divs começam ocultas */
+}
+
+.form-section.active {
+    display: block; /* Mostra a div quando ela está ativa */
+}
