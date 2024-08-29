@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Finalizar Compra</title>
+</head>
+<body>
+    <form>
+        <div class="banner">
+            <div class="banner-text">
+                <h1>FINALIZAR COMPRA</h1>
+            </div>
+        </div>
+
+        <div id="div1" class="form-section active"> <!-- Aqui o active garante que esta seção seja exibida inicialmente -->
+            <h3>FORMA DE PAGAMENTO</h3>
+            <input type="checkbox" id="metodo1" name="metodo1" value="Dinheiro">
+            <label for="metodo1">Dinheiro</label>
+            <br>
+            <input type="checkbox" id="metodo2" name="metodo2" value="PIX">
+            <label for="metodo2">PIX(chave exibida após o envio)</label>
+            <br>
+            <input type="checkbox" id="metodo3" name="metodo3" value="Debito">
+            <label for="metodo3">Cartão de Débito</label>
+            <br>
+            <input type="checkbox" id="metodo4" name="metodo4" value="Credito">
+            <label for="metodo4">Cartão de Crédito</label>
+            <br>
+            <button type="button" class="next-btn">Próximo</button>
+        </div>
+        
+        <div id="div2" class="form-section">
+            <h3>FORMA DE RETIRADA</h3>
+            <input type="checkbox" id="metodoA" name="metodoA" value="Delivery">
+            <label for="metodoA">Delivery</label>
+            <br>
+            <input type="checkbox" id="metodoB" name="metodoB" value="Retirada">
+            <label for="metodoB">Retirada</label>
+            <br>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="button" class="next-btn">Próximo</button>
+        </div>
+        
+        <div id="div3" class="form-section">
+            <h3>DADOS PESSOAIS</h3>
+            <label for="name">Nome (apenas 1ª vez)</label>
+            <br>
+            <input type="text" id="name" name="nome" placeholder="Nome">
+            <br>
+            <label for="tel">Número de WhatsApp (somente dígitos)</label>
+            <br>
+            <input type="text" id="tel" name="tel" placeholder="Telefone">
+            <br>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="button" class="next-btn">Próximo</button>
+        </div>
+        
+        <div id="div4" class="form-section">
+            <h3>ENDEREÇO PARA ENTREGA</h3>
+            <label for="Bairro">Bairro/Condomínio</label>
+            <input type="text" id="Bairro" name="Bairro" placeholder="Bairro/Condomínio">
+            <br>
+            <label for="Rua">Rua</label>
+            <br>
+            <input type="text" id="Rua" name="Rua" placeholder="Rua">
+            <br>
+            <label for="Numero">Número</label>
+            <br>
+            <input type="text" id="Numero" name="Numero" placeholder="Número">
+            <br>
+            <label for="APTO">APTO/Complemento</label>
+            <input type="text" id="APTO" name="APTO" placeholder="APTO/Complemento">
+            <br>
+            <button type="button" class="prev-btn">Anterior</button>
+            <button type="submit">ENVIAR PEDIDO</button>
+        </div>            
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
