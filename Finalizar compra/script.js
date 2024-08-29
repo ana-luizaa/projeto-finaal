@@ -70,3 +70,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializa mostrando a primeira seção
     showSection(currentSection);
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const dinheiroCheckbox = document.getElementById('metodo1');
+    const dinheiroInput = document.getElementById('dinheiro-input');
+
+    // Função para mostrar ou ocultar o campo de input
+    function toggleDinheiroInput() {
+        if (dinheiroCheckbox.checked) {
+            dinheiroInput.style.display = 'block';
+        } else {
+            dinheiroInput.style.display = 'none';
+        }
+    }
+
+    // Adiciona event listener para o checkbox "Dinheiro"
+    dinheiroCheckbox.addEventListener('change', toggleDinheiroInput);
+
+    // Inicializa o estado do campo de input baseado no estado inicial do checkbox
+    toggleDinheiroInput();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const dinheiroCheckbox = document.getElementById('metodo1');
+    const dinheiroInput = document.getElementById('dinheiro-input');
+    const dinheiroQuestion = document.getElementById('dinheiro-question');
+
+    // Função para mostrar ou ocultar o campo de input e a pergunta
+    function toggleDinheiroInput() {
+        if (dinheiroCheckbox.checked) {
+            dinheiroInput.style.display = 'block';
+            dinheiroQuestion.style.display = 'block'; // Exibe a pergunta
+        } else {
+            dinheiroInput.style.display = 'none';
+            dinheiroQuestion.style.display = 'none'; // Oculta a pergunta
+        }
+    }
+
+    // Adiciona event listener para o checkbox "Dinheiro"
+    dinheiroCheckbox.addEventListener('change', toggleDinheiroInput);
+
+    // Inicializa o estado do campo de input e da pergunta baseado no estado inicial do checkbox
+    toggleDinheiroInput();
+});
