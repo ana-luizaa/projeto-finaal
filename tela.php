@@ -19,7 +19,7 @@
         <ul class="nav-flex-row">
             <div class="icons-container">
                 <div class="menu-icon">
-                    <a href="menu/menuRefeicao.html"><i class="fa-solid fa-bars"></i></a>
+                    <a href="<?php echo'./menu/menuRefeicao.php';?>"><i class="fa-solid fa-bars"></i></a>
                 </div>
                 <div class="cart-icon">
                     <a href="#cart"><i class="fa-solid fa-shopping-cart"></i></a>
@@ -87,10 +87,14 @@
         </div>
         <div class="cart-content">
           <div id="cart-items">
-            <p id="empty-cart-message">Você não adicionou nenhum item.</p>
+            <img src="cocamini.png">
+            <h2>ARROZ COM PEQUI</h2>
+                <li>
+                    R$ 18,00
+                </li>
           </div>
         </div>
-      </div>
+    </div>
       
     <footer>
         <div class="waves">

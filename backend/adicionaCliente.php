@@ -1,26 +1,29 @@
 <?php
    if (isset($_POST['nome'])) {
-    $dbHost = 'Localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'projeto-final';
+       include "config.php";
+        $nome = $_POST['nome'];
+        $telefone = $_POST['telefone'];
+        // $cepInput = $_POST['cep'];
 
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName );
-    $nome = $_POST['nome'];
-    $nome = $_POST['telefone'];
-    $sql = "insert into clientes (nome, telefone) values ('" . $nome . "," . $telefone . "');";
+        $querySelect = "SELECT id FROM clientes WHERE telefone = '$telefone'";
+        $dadosSelect = mysqli_query($conexao, $querySelect);
+        $queryInsert = "INSERT INTO clientes (nome, telefone) VALUES ('" . $nome . "','" . $telefone . "')";
+        $dadosInsert = mysqli_query($conexao, $queryInsert);
+       
 
-    if (!$conexao) {
-        die("Connection failed: " . mysqli_connect_error());
+        if($dadosSelect){
+            while($linha = mysqli_fetch_assoc($dadosSelect)){
+                if($linha["id"] > 0){
+                    echo "Cliente ja cadastrado";
+                    echo $linha["id"];
+
+                }
+                
+            };
+        }
+        else{
+            $dadosInsert;
+        }
+       
     }
-
-    if ($conexao->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conexao->close();
-}
-
 ?>
