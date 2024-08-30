@@ -1,25 +1,15 @@
-<?php
-   if (isset($_POST['nome'])) {
-    $dbHost = 'Localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'projeto-final';
-
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName );
-    $nome = $_POST['nome'];
-    $sql = "insert into clientes (nome) values ('" . $nome . "');";
-
-    if (!$conexao) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    if ($conexao->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $conexao->close();
-}
+ <?php
+ 
+   include "config.php";
+   $redirect= $_POST['redirect'];
+   $idItem = $_POST['idItem'];
+   $qtdItem = $_POST['quantidade'];
+   $qtdItemTotal = $qtdItem + 1;
+   $sqlInsItem = "INSERT INTO item_pedido (idItem, quantidade, idPedido) VALUES ('" . $idItem . "','" . $qtdItemTotal . "', NULL)";
+   $dadosInsertItem = mysqli_query($conexao, $sqlInsItem);
+   if (isset($_POST['idItem'])) {
+      $dadosInsertItem;
+      header("Location: $redirect");
+   }
 
 ?>
