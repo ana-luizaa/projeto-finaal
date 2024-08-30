@@ -1,3 +1,16 @@
+<?php
+//Pegando o caminho absoluto a partir da raiz da pasta publica do servidor
+$path = $_SERVER['DOCUMENT_ROOT'] . '\projeto-finaal\backend\\';
+
+$fileConnect = $path . 'config.php';
+
+include($fileConnect);
+
+ $sql = "SELECT * FROM item_pedido";
+ $result = mysqli_query($conexao, $sql);
+ 
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,13 +99,17 @@
           <i class="fa-solid fa-shopping-cart"></i>
         </div>
         <div class="cart-content">
-          <div id="cart-items">
-            <img src="cocamini.png">
-            <h2>ARROZ COM PEQUI</h2>
-                <li>
-                    R$ 18,00
-                </li>
-          </div>
+            <!-- constroi o cardapio trazendo os dados do banco -->
+            <?php
+                    while($carrinho = mysqli_fetch_assoc($result)){
+                        $itemDetalhe = "SELECT * FROM item WHERE idItem = '" . $carrinho['idItem'] . "'";
+                        $itemDetResult = mysqli_query($conexao, $sql);
+                        $carDetalhe = mysqli_fetch_assoc($itemDetResult);
+                         echo "<div id='cart-items'><img src=img/".$carDetalhe['nomeImg']."><h2>".$carDetalhe['nome']."</h2><li>R$".$carDetalhe['valor']."</li></div><br/>";
+
+                    };
+            
+            ?>
         </div>
     </div>
       
