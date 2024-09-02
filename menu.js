@@ -12,3 +12,4 @@ function toggleDescription(item) {
         title.style.display = 'none'; 
     }
 }
+
