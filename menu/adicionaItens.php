@@ -1,6 +1,11 @@
  <?php
  
-   include "config.php";
+//Pegando o caminho absoluto a partir da raiz da pasta publica do servidor
+   $path = $_SERVER['DOCUMENT_ROOT'] . '\projeto-finaal\backend\\';
+
+   $fileConnect = $path . 'config.php';
+
+   include($fileConnect);
    $redirect= $_POST['redirect'];
    $idItem = $_POST['idItem'];
    $qtdItem = $_POST['quantidade'];
