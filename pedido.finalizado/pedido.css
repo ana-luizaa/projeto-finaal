@@ -1,49 +1,57 @@
-@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap");
 
+body {
+  font-family: "Big Shoulders Text", cursive;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ocupa a altura total da tela */
+  background: linear-gradient(
+    135deg,
+    #ff6600,
+    #ffcc99
+  ); /* Degradê laranja para um tom mais claro */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        body {
-            font-family: 'Big Shoulders Text', cursive;
-            margin: 0;
-            padding: 0;
-            height: 100vh; /* Ocupa a altura total da tela */
-            background: linear-gradient(135deg, #ff6600, #ffcc99); /* Degradê laranja para um tom mais claro */
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            padding: 40px;
-            background-color: rgba(255, 102, 0, 0.9); /* Laranja com um pouco de transparência */
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        header {
-            margin-bottom: 30px;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-        }
-        
-        main {
-            margin-bottom: 30px;
-        }
-        
-        .order-summary p {
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-        
-        footer {
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 0 0 8px 8px;
-            
-        }
-        
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 40px;
+  background-color: rgba(
+    255,
+    102,
+    0,
+    0.9
+  ); /* Laranja com um pouco de transparência */
+  border-radius: 8px;
+  text-align: center;
+  position: relative; /* Adicionado para posicionar o botão dentro do container */
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+main {
+  margin-bottom: 30px;
+}
+
+.order-summary p {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
