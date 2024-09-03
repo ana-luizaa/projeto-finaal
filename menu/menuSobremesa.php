@@ -11,7 +11,7 @@ include($file);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <form action="../backend/adicionaItens.php" method="POST">
+    <form action="adicionaItens.php" method="POST">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@ include($file);
                     <?php
                         while($cardapio = mysqli_fetch_assoc($result)){
                         
-                            echo "<div class='menu-item'><img src=img/".$cardapio['nomeImg']."><h2>".$cardapio['nome']."</h2><li>R$".$cardapio['valor']."</li><p class='text-bottom'>".$cardapio['descricao']."</p><button class='add-to-cart' name='insertItem'><input hidden name='idItem' value='".$cardapio['idItem']."'><input hidden name='redirect' value='menu/menuSobremesa.php'></input><input hidden name='quantidade' value='".$cardapio['quantidade']."'></input><input hidden type='submit'><i class='fa-solid fa-cart-shopping'></i></button></div><br/>";
+                            echo "<div class='menu-item'><img src=img/".$cardapio['nomeImg']."><h2>".$cardapio['nome']."</h2><li>R$".$cardapio['valor']."</li><p class='text-bottom'>".$cardapio['descricao']."</p><button class='add-to-cart' name='insertItem'><input hidden name='idItem' value='".$cardapio['idItem']."'><input hidden name='redirect' value='menuSobremesa.php'></input><input hidden name='quantidade' value='".$cardapio['quantidade']."'></input><input hidden type='submit'><i class='fa-solid fa-cart-shopping'></i></button></div><br/>";
                         };
                 
                     ?>

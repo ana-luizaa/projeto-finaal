@@ -9,6 +9,11 @@ include($fileConnect);
  $sql = "SELECT * FROM item_pedido";
  $result = mysqli_query($conexao, $sql);
  
+
+ 
+//  $itemDetResult = mysqli_query($conexao, $itemDetalhe);
+ 
+ 
  
 ?>
 <!DOCTYPE html>
@@ -92,12 +97,12 @@ include($fileConnect);
         </div>
         <div class="panel-lg"></div>
     </section>
-
     <div id="cart" class="cart-hidden">
         <div class="cart-header">
           <h2>Meu Carrinho</h2>
           <i class="fa-solid fa-shopping-cart"></i>
         </div>
+<<<<<<< HEAD
         <div class="cart-content">
 
         <div class="cart-footer">
@@ -112,11 +117,31 @@ include($fileConnect);
                          echo "<div id='cart-items'><img src=img/".$carDetalhe['nomeImg']."><h2>".$carDetalhe['nome']."</h2><li>R$".$carDetalhe['valor']."</li></div><br/>";
 
                     };
+=======
+        <?php
+>>>>>>> 59d1ffc952d671999d1875064c969a287952d040
             
-            ?>
-        </div>
-    </div>
-      
+            if(empty($carrinho = mysqli_fetch_assoc($result))){
+              echo "<div class='cart-content'><div id='cart-items'><p id='empty-cart-message'>Você não adicionou nenhum item.</p></div></div>";
+            }
+            else{
+                while($carrinho = mysqli_fetch_assoc($result)){
+                    $itemDetalhe = "SELECT nome, valor, nomeImg FROM item WHERE idItem = '" . $carrinho['idItem'] . "'";
+                    $resultSel = $conexao->query($itemDetalhe);
+                    $linhaDet = mysqli_fetch_assoc($resultSel);
+                    echo "<div id='cart-items'><img src=img/".$linhaDet['nomeImg']."><h2>".$linhaDet['nome']."</h2><li>R$".$linhaDet['valor'].",00</li></div><br/>";
+                    
+                }
+            }
+        ?>
+
+        
+        <!-- <div class="cart-content">
+          <div id="cart-items">
+            <p id="empty-cart-message">Você não adicionou nenhum item.</p>
+          </div>
+        </div> -->
+      </div>
     <footer>
         <div class="waves">
             <div class="wave" id="wave1"></div>
