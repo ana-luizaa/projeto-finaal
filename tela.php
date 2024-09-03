@@ -99,6 +99,10 @@ include($fileConnect);
           <i class="fa-solid fa-shopping-cart"></i>
         </div>
         <div class="cart-content">
+
+        <div class="cart-footer">
+        <button class="continue-button">Continuar</button>
+    </div>
             <!-- constroi o cardapio trazendo os dados do banco -->
             <?php
                     while($carrinho = mysqli_fetch_assoc($result)){
