@@ -48,6 +48,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+.cart-items img {
+  height: 20px;
+  width: 20px;
+}
 
 .section-intro h1 {
 
