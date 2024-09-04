@@ -102,7 +102,24 @@ include($fileConnect);
           <h2>Meu Carrinho</h2>
           <i class="fa-solid fa-shopping-cart"></i>
         </div>
+<<<<<<< HEAD
+        <div class="cart-content">
+
+        <div class="cart-footer">
+        <button class="continue-button">Continuar</button>
+    </div>
+            <!-- constroi o cardapio trazendo os dados do banco -->
+            <?php
+                    while($carrinho = mysqli_fetch_assoc($result)){
+                        $itemDetalhe = "SELECT * FROM item WHERE idItem = '" . $carrinho['idItem'] . "'";
+                        $itemDetResult = mysqli_query($conexao, $sql);
+                        $carDetalhe = mysqli_fetch_assoc($itemDetResult);
+                         echo "<div id='cart-items'><img src=img/".$carDetalhe['nomeImg']."><h2>".$carDetalhe['nome']."</h2><li>R$".$carDetalhe['valor']."</li></div><br/>";
+
+                    };
+=======
         <?php
+>>>>>>> 59d1ffc952d671999d1875064c969a287952d040
             
             if(empty($carrinho = mysqli_fetch_assoc($result))){
               echo "<div class='cart-content'><div id='cart-items'><p id='empty-cart-message'>Você não adicionou nenhum item.</p></div></div>";
