@@ -33,36 +33,42 @@
             };
         }
         else{
-           
             $dadosInsEndereco;
             if($geraIdEnd > 0){
               $dadosInsert;
-            }     
+            }
         }     
+        // envia mensagem wpp
+        $curl = curl_init();
+        $telefone = $_POST['telefone'];
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://app.whatsgw.com.br/api/WhatsGw/Send',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS =>'{
+            "apikey" : "205dd43d-4ff5-4419-9ba8-2adebfa6011e",
+            "phone_number" : "553191829077",
+            "contact_phone_number" : 55'."$telefone".',
+            "message_custom_id" : "teste",
+            "message_type" : "text",
+            "message_body" : "Ola! Seu pedido no restaurante Cheirô Mineiro foi realizado com sucesso! Sua entrega chegará em ate 55 minutos no endereço: '.$logradouro.', numero '.$numero.'/'.$complemento.', bairro '.$bairro.'."
+
+            }',
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json'
+        ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        header("Location: wpp.php");
     }
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido Finalizado</title>
-    <link rel="stylesheet" href="../pedido.finalizado/pedido.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Pedido Finalizado!</h1>
-        </header>
-        <main>
-            <section class="order-summary">
-                <p>Obrigado pelo seu pedido!</p>
-                <p>As informações do seu pedido serão enviadas via WhatsApp.</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2024 Cheirô Mineiro. Todos os direitos reservados.</p>
-        </footer>
-    </div>
-</body>
-</html>
+

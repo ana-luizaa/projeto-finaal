@@ -6,8 +6,6 @@ $fileConnect = $path . 'config.php';
 
 include($fileConnect);
 
-//  $sql = "SELECT * FROM item WHERE tipo = 'bebida'";
-//  $result = mysqli_query($conexao, $sql);
 function pesquisaCep(){
     $cepInput = $_POST['cep'];
     function get_endereco($cep){
