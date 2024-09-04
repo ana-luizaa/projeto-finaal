@@ -110,29 +110,18 @@ include($fileConnect);
     </div>
             <!-- constroi o cardapio trazendo os dados do banco -->
             <?php
-                    while($carrinho = mysqli_fetch_assoc($result)){
-                        $itemDetalhe = "SELECT * FROM item WHERE idItem = '" . $carrinho['idItem'] . "'";
-                        $itemDetResult = mysqli_query($conexao, $sql);
-                        $carDetalhe = mysqli_fetch_assoc($itemDetResult);
-                         echo "<div id='cart-items'><img src=img/".$carDetalhe['nomeImg']."><h2>".$carDetalhe['nome']."</h2><li>R$".$carDetalhe['valor']."</li></div><br/>";
-
-                    };
-=======
-        <?php
->>>>>>> 59d1ffc952d671999d1875064c969a287952d040
-            
-            if(empty($carrinho = mysqli_fetch_assoc($result))){
-              echo "<div class='cart-content'><div id='cart-items'><p id='empty-cart-message'>Você não adicionou nenhum item.</p></div></div>";
-            }
-            else{
-                while($carrinho = mysqli_fetch_assoc($result)){
-                    $itemDetalhe = "SELECT nome, valor, nomeImg FROM item WHERE idItem = '" . $carrinho['idItem'] . "'";
-                    $resultSel = $conexao->query($itemDetalhe);
-                    $linhaDet = mysqli_fetch_assoc($resultSel);
-                    echo "<div id='cart-items'><img src=img/".$linhaDet['nomeImg']."><h2>".$linhaDet['nome']."</h2><li>R$".$linhaDet['valor'].",00</li></div><br/>";
-                    
+                if(empty($carrinho = mysqli_fetch_assoc($result))){
+                echo "<div class='cart-content'><div id='cart-items'><p id='empty-cart-message'>Você não adicionou nenhum item.</p></div></div>";
                 }
-            }
+                else{
+                    while($carrinho = mysqli_fetch_assoc($result)){
+                        $itemDetalhe = "SELECT nome, valor, nomeImg FROM item WHERE idItem = '" . $carrinho['idItem'] . "'";
+                        $resultSel = $conexao->query($itemDetalhe);
+                        $linhaDet = mysqli_fetch_assoc($resultSel);
+                        echo "<div id='cart-items'><img src=img/".$linhaDet['nomeImg']."><h2>".$linhaDet['nome']."</h2><li>R$".$linhaDet['valor'].",00</li></div><br/>";
+                        
+                    }
+                }
         ?>
       </div>
     <footer>
