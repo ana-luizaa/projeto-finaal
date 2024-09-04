@@ -134,13 +134,6 @@ include($fileConnect);
                 }
             }
         ?>
-
-        
-        <!-- <div class="cart-content">
-          <div id="cart-items">
-            <p id="empty-cart-message">Você não adicionou nenhum item.</p>
-          </div>
-        </div> -->
       </div>
     <footer>
         <div class="waves">
