@@ -668,3 +668,27 @@ footer {
 .continue-button:hover {
   background-color: #e65c00;
 }
+
+#cart-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#cart-items img.cart-item-img {
+  width: 50px; 
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px; 
+}
+
+#cart-items h2 {
+  margin: 0;
+  font-size: 1em;
+}
+
+#cart-items li {
+  margin: 0;
+  font-size: 0.9em;
+  color: #FF6600;
+}
