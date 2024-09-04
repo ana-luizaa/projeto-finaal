@@ -8,7 +8,7 @@ include($fileConnect);
 
  $sql = "SELECT * FROM item_pedido";
  $result = mysqli_query($conexao, $sql);
- 
+ $valorTotalItens = 0
 
  
 //  $itemDetResult = mysqli_query($conexao, $itemDetalhe);
@@ -102,11 +102,8 @@ include($fileConnect);
           <h2>Meu Carrinho</h2>
           <i class="fa-solid fa-shopping-cart"></i>
         </div>
-<<<<<<< HEAD
-        <div class="cart-content">
-
         <div class="cart-footer">
-        <button class="continue-button">Continuar</button>
+            <a class="continue-button" href="./FinalizarCompra/index.html">Continuar</a><br/>
     </div>
             <!-- constroi o cardapio trazendo os dados do banco -->
             <?php
@@ -118,11 +115,13 @@ include($fileConnect);
                         $itemDetalhe = "SELECT nome, valor, nomeImg FROM item WHERE idItem = '" . $carrinho['idItem'] . "'";
                         $resultSel = $conexao->query($itemDetalhe);
                         $linhaDet = mysqli_fetch_assoc($resultSel);
-                        echo "<div id='cart-items'><img src=img/".$linhaDet['nomeImg']."><h2>".$linhaDet['nome']."</h2><li>R$".$linhaDet['valor'].",00</li></div><br/>";
+                        $valorTI = $valorTotalItens + $linhaDet['valor'];
+                        echo "<div id='cart-items'><img src=./menu/img/".$linhaDet['nomeImg']."><h2>".$linhaDet['nome']."</h2><li>R$".$linhaDet['valor'].",00</li></div><br/>";
                         
                     }
                 }
         ?>
+        
       </div>
     <footer>
         <div class="waves">
