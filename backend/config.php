@@ -7,4 +7,6 @@
 
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName );
 
+
+   
 ?>

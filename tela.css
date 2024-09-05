@@ -105,8 +105,8 @@ body {
 }
 
 
-.menu-icon {
-
+.menu-icon { 
+  
     position: absolute;
     top: 20px;
     left: 20px;
@@ -676,7 +676,78 @@ footer {
 }
 
 #cart-items img.cart-item-img {
-  width: 50px; 
+  width: 10px !important; /* Força o tamanho da imagem a ser o menor possível */
+  height: auto !important;
+  margin-right: 10px;
+  border-radius: 5px; 
+}
+
+#cart-items h2 {
+  margin: 0;
+  font-size: 1em;
+}
+
+#cart-items li {
+  margin: 0;
+  font-size: 0.9em;
+  color: #FF6600;
+}
+
+
+
+
+
+/* Contêiner do carrinho */
+#cart {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ou ajuste conforme necessário */
+  max-width: 400px; /* Ajuste conforme necessário */
+  border: 1px solid #ccc; /* Apenas para visualização */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fff; /* Adiciona um fundo branco para melhor visualização */
+}
+
+/* Conteúdo do carrinho */
+.cart-content {
+  flex: 1;
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder o espaço */
+}
+
+/* Footer do carrinho */
+.cart-footer {
+  margin-top: auto; /* Faz com que o footer fique na parte inferior */
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* Botão continuar */
+.continue-button {
+  background-color: #FF6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Certifica-se de que o link não tem sublinhado */
+}
+
+.continue-button:hover {
+  background-color: #e65c00;
+}
+
+/* Itens do carrinho */
+#cart-items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#cart-items img.cart-item-img {
+  width: 20px; /* Ajuste conforme necessário */
   height: auto;
   margin-right: 10px;
   border-radius: 5px; 
@@ -692,3 +763,11 @@ footer {
   font-size: 0.9em;
   color: #FF6600;
 }
+
+
+
+
+
+
+
+

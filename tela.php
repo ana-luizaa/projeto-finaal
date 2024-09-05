@@ -1,20 +1,16 @@
 <?php
-//Pegando o caminho absoluto a partir da raiz da pasta publica do servidor
-$path = $_SERVER['DOCUMENT_ROOT'] . '\projeto-finaal\backend\\';
+// Pegando o caminho absoluto a partir da raiz da pasta publica do servidor
+$path = $_SERVER['DOCUMENT_ROOT'] . '/projeto-finaal/backend/';
 
 $fileConnect = $path . 'config.php';
 
 include($fileConnect);
 
- $sql = "SELECT * FROM item_pedido";
- $result = mysqli_query($conexao, $sql);
- $valorTotalItens = 0
+$sql = "SELECT * FROM item_pedido";
+$result = mysqli_query($conexao, $sql);
 
- 
-//  $itemDetResult = mysqli_query($conexao, $itemDetalhe);
- 
- 
- 
+$valorTotalItens = 0; // Inicializa o valor total
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -122,6 +118,10 @@ include($fileConnect);
                 }
         ?>
         
+        <div class="cart-footer">
+            <a class="continue-button" href="./FinalizarCompra/index.html">Continuar</a><br/>
+    </div>
+    
       </div>
     <footer>
         <div class="waves">
