@@ -102,9 +102,7 @@ include($fileConnect);
           <h2>Meu Carrinho</h2>
           <i class="fa-solid fa-shopping-cart"></i>
         </div>
-        <div class="cart-footer">
-            <a class="continue-button" href="./FinalizarCompra/index.html">Continuar</a><br/>
-    </div>
+       
             <!-- constroi o cardapio trazendo os dados do banco -->
             <?php
                 if(empty($carrinho = mysqli_fetch_assoc($result))){
@@ -122,6 +120,10 @@ include($fileConnect);
                 }
         ?>
         
+        <div class="cart-footer">
+            <a class="continue-button" href="./FinalizarCompra/index.html">Continuar</a><br/>
+    </div>
+    
       </div>
     <footer>
         <div class="waves">
