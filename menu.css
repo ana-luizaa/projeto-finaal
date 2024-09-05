@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 3%;
-}
+    margin-left: 12%;
 
 h1 {
     text-align: center;
@@ -41,19 +41,22 @@ h1 {
 
 .menu-item {
     position: relative;
-    display: flex;
+    display: grid;
     padding: 1%;
     align-items: center;
     background-color: #efefef;
     border-radius: 3vh;
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.316);
     transition: background-color 0.3s ease;
-    margin: 1vh;
-    width: 72vh;
+   
+    width: 95vh;
     height: 30vh;
-    left: -10vh;
+    left: 19vh;
 }
+.teste{
+    width: 100%;
 
+}
 .menu-item img {
     width: 27%;
     height: 29vh;
@@ -65,7 +68,7 @@ h1 {
 .menu-item h2 {
     position: absolute;
     top: 3vh;
-    left: 22vh;
+    left: 30vh;
     margin: 0;
     color: #f36100;
     font-size: 3.5vh;
@@ -82,11 +85,11 @@ h1 {
     text-align: justify;
     margin-right: 2vh;
     left: 1vh;
-    font-size: 150%;
+    font-size: 120%;
     font-weight: bold;
     position: absolute;
     top: 11vh;
-    left: 22.5vh;
+    left: 30vh;
     right: 9vh;
     color: #212121;
 }
@@ -123,7 +126,7 @@ h1 {
 .menu-item li {
     position: absolute;
     top: 9vh; 
-    left: 22.5vh; 
+    left: 30vh; 
     margin: 0;
     color: #d95802;
     font-size: 165%;
@@ -184,7 +187,11 @@ section {
     height: 5vh;
     top: 5vh;
 }
-
+.test{
+   max-width: 900px;
+   display: flow-root;
+      
+}
 .add-to-carts:hover {
     color: #cc5200; 
 }

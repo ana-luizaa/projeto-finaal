@@ -37,7 +37,7 @@ include($fileConnect);
         <ul class="nav-flex-row">
             <div class="icons-container">
                 <div class="menu-icon">
-                    <a href="<?php echo'./menu/menuRefeicao.php';?>"><i class="fa-solid fa-bars"></i></a>
+                    <a href="<?php echo'menu.php';?>"><i class="fa-solid fa-bars"></i></a>
                 </div>
                 <div class="cart-icon">
                     <a href="#cart"><i class="fa-solid fa-shopping-cart"></i></a>
@@ -105,7 +105,7 @@ include($fileConnect);
         <div class="cart-footer">
             <a class="continue-button" href="./FinalizarCompra/index.html">Continuar</a><br/>
     </div>
-            <!-- constroi o cardapio trazendo os dados do banco -->
+            <!-- constroi o carrinho trazendo os dados do banco -->
             <?php
                 if(empty($carrinho = mysqli_fetch_assoc($result))){
                 echo "<div class='cart-content'><div id='cart-items'><p id='empty-cart-message'>Você não adicionou nenhum item.</p></div></div>";
@@ -116,7 +116,7 @@ include($fileConnect);
                         $resultSel = $conexao->query($itemDetalhe);
                         $linhaDet = mysqli_fetch_assoc($resultSel);
                         $valorTI = $valorTotalItens + $linhaDet['valor'];
-                        echo "<div id='cart-items'><img src=./menu/img/".$linhaDet['nomeImg']."><h2>".$linhaDet['nome']."</h2><li>R$".$linhaDet['valor'].",00</li></div><br/>";
+                        echo "<div id='cart-items'><h2>".$linhaDet['nome']."</h2><li>R$".$linhaDet['valor'].",00</li></div><br/>";
                         
                     }
                 }
