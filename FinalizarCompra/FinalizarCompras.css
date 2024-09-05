@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');
+
+body {
+    font-family: 'Big Shoulders Text', cursive;
+    margin: 0;
+    padding: 0;
+    font-family: 'Big Shoulders Text', cursive;
+    background: linear-gradient(145deg, #ff6600, #ff9933); 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 100%;
+    backdrop-filter: blur(8px); /* Efeito embaçado ajustado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #FF6600; /* Cor laranja */
+    font-weight: 300;
+    font-size: 2rem; /* Tamanho da fonte ajustado */
+    text-align: center;
+    margin-bottom: 20px; /* Margem ajustada */
+}
+
+.finalizar-compra {
+    background-color: #FF6600; /* Cor de fundo laranja */
+    color: #fff; /* Texto branco */
+    font-size: 1.2rem; /* Tamanho da fonte ajustado */
+    padding: 15px 30px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Margem centralizada */
+}
+
+h3 {
+    font-size: 1.25rem; /* Tamanho da fonte ajustado */
+    margin-bottom: 15px;
+}
+
+.checkbox-group, .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaço ajustado entre grupos */
+    width: 100%;
+}
+
+.checkbox-item, .input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.checkbox-item i, .input-group i {
+    font-size: 20px; /* Tamanho dos ícones ajustado */
+    color: #FF6600; /* Laranja */
+    margin-right: 10px; /* Espaço entre ícone e texto/campo */
+}
+
+.checkbox-item {
+    margin-right: 20px; /* Espaço ajustado entre itens */
+}
+
+.input-group label {
+    font-size: 1rem; /* Tamanho do texto do rótulo */
+    margin-left: 10px; /* Espaço para acomodar o ícone */
+    flex: 1; /* Permite que o rótulo ocupe o espaço restante */
+}
+
+.input-group input[type=text] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px; /* Largura máxima ajustada */
+    margin-left: 10px; /* Espaço entre ícone e campo de entrada */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+button {
+    background-color: #FF6600; /* Laranja */
+    border: none;
+    color: #fff;
+    padding: 12px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 45%;
+}
+
+button:hover {
+    background-color: #e65c00; /* Leve mudança na cor do botão ao passar o mouse */
+}
+
+
+
+
