@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="FinalizarCompras.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>FinalizarCompra</title>
+    <title>Finalizar Compra</title>
 </head>
 <body>
     <form action="../backend/adicionaCliente.php" method="POST">
@@ -59,6 +59,7 @@
                     <i class="fa-solid fa-truck-fast"></i>
                     <input type="checkbox" id="metodoA" name="metodoA" value="Delivery">
                     <label for="metodoA">Delivery</label>
+                    <p id="form-question" style="display: none;">O valor do frete será de R$10,00</p>
                 </div>
             </div>
             <div class="checkbox-group">
@@ -121,7 +122,18 @@
             </div>
         </div>            
     </form>
-
     <script src="finalizarCompra.js"></script>
+    <script>
+        
+        document.getElementById('metodoA').addEventListener('change', function() {
+    var freteQuestion = document.getElementById('form-question');
+    if (this.checked) {
+        freteQuestion.style.display = 'block';
+    } else {
+        freteQuestion.style.display = 'none';
+    }
+});
+
+    </script>
 </body>
 </html>

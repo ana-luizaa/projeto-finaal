@@ -111,3 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializa o estado do campo de input e da pergunta baseado no estado inicial do checkbox
     toggleDinheiroInput();
 });
+
+document.getElementById('metodoA').addEventListener('change', function() {
+    var freteQuestion = document.getElementById('form-question');
+    if (this.checked) {
+        freteQuestion.style.display = 'block';
+    } else {
+        freteQuestion.style.display = 'none';
+    }
+});
+
